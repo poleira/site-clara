@@ -14,9 +14,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Deploy to Cloudflare Workers
+## Deploy to Cloudflare Pages
 
-This project uses a static-assets Worker setup so it can be deployed with Angular 14.
+This project is configured for Cloudflare Pages.
 
 1. Build for production:
 
@@ -27,7 +27,7 @@ npm run build:prod
 2. Deploy:
 
 ```bash
-npx wrangler deploy
+npx wrangler pages deploy dist/clara-site --project-name=site-clara --branch=main
 ```
 
 Or run both in one command:
@@ -35,6 +35,8 @@ Or run both in one command:
 ```bash
 npm run deploy
 ```
+
+If you receive "Project not found", create the Pages project first in the Cloudflare dashboard (or use the exact existing project name in the deploy command).
 
 ## Running unit tests
 

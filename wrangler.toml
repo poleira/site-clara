@@ -1,7 +1,2 @@
 name = "site-clara"
-main = "worker.js"
-compatibility_date = "2026-06-11"
-
-[assets]
-directory = "./dist/clara-site"
-binding = "ASSETS"
+pages_build_output_dir = "./dist/clara-site"
