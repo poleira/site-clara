@@ -14,6 +14,28 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Deploy to Cloudflare Workers
+
+This project uses a static-assets Worker setup so it can be deployed with Angular 14.
+
+1. Build for production:
+
+```bash
+npm run build:prod
+```
+
+2. Deploy:
+
+```bash
+npx wrangler deploy
+```
+
+Or run both in one command:
+
+```bash
+npm run deploy
+```
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
